@@ -6,34 +6,47 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - intent: filled
+  - action: utter_thankyou
+  - action: utter_msg
+  - action: utter_options
   - intent: mood_great
   - action: utter_happy
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: filled
+#   - action: utter_thankyou
+#   - action: utter_msg
+#   - action: utter_options
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_specific
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_specific
 
 - story: specific
   steps: 
   - intent: specific
   - action: utter_specific
 
+
+- story: join course
+  steps: 
+  - intent: join_course
+  - action: utter_join_course
 - story: happy
   steps: 
   - intent: happy
@@ -42,11 +55,15 @@ stories:
 - story: bye
   steps:
   - intent: goodbye
-  - action: utter_goodbye
+  - action: utter_form
   - intent: affirm
   - action: utter_happy
 
-  
+- story: msit
+  steps:
+  - intent: aboutmsit
+  - action: utter_msit
+  - action: utter_info
 
 - story:  Placement
   steps:
@@ -65,28 +82,73 @@ stories:
   - action: utter_specific
 
 
-- story: Package
+- story: gat results
   steps:
-  - intent: Package
-  - action: action_package
+  - intent: gat_results
+  - action: utter_gat_results
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_specific
+
+- story: fee_details
+  steps:
+  - intent: fee_details
+  - action: utter_fee_details
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_specific
+
+- story: fee_details
+  steps:
+  - intent: fee_details
+  - action: utter_fee_details
   - action: utter_did_that_help
   - intent: deny
   - action: utter_happy
 
+- story: JNTUH
+  steps:
+  - intent: JNTUH
+  - action: utter_jntuh
+
+
+- story: IIITH
+  steps:
+  - intent: IIITH
+  - action: utter_iiith
+ 
+- story: Package
+  steps:
+  - intent: Package
+  - action: utter_package
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_happy
+
+- story: pack2020
+  steps:
+  - intent: p2020
+  - action: utter_package1
+
+- story: pack2019
+  steps:
+  - intent: p2019
+  - action: utter_package2
+
+- story: Package3
+  steps:
+  - intent: p2018
+  - action: utter_package3
+
+- story: JNTUK
+  steps:
+  - intent: JNTUK
+  - action: utter_jntuk
+
 
 - story: Package
   steps:
   - intent: Package
-  - action: action_package
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_specific
-  
-
-
-- story: package_details
-  steps:
-  - intent: package_details
   - action: utter_package
   - action: utter_did_that_help
   - intent: affirm
@@ -99,23 +161,34 @@ stories:
   - intent: package_details
   - action: utter_package
   - action: utter_did_that_help
-  - intent: deny
-  - action: utter_happy
-
-- story: Fee
-  steps: 
-  - intent: Fee
-  - action: action_fee
-  - action: utter_did_that_help
   - intent: affirm
   - action: utter_specific
   
 
 
-- story: Fee
-  steps: 
-  - intent: Fee
-  - action: action_fee
+- story: package_details
+  steps:
+  - intent: package_details
+  - action: utter_package
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_happy
+
+
+- story: fee_details
+  steps:
+  - intent: fee_details
+  - action: utter_fee_details
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_specific
+  
+  
+
+- story: fee_details
+  steps:
+  - intent: fee_details
+  - action: utter_fee_details
   - action: utter_did_that_help
   - intent: deny
   - action: utter_happy
@@ -781,6 +854,13 @@ stories:
   steps:
   - intent: Thankyou
   - action: utter_thankyou
+ 
+
+
+
+
+
+
  
 
 
