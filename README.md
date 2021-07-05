@@ -42,14 +42,14 @@ https://www.youtube.com/watch?v=9C1Km6xfdMA
      
 #### Install [Docker-Compose](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-16-04)
 
-- > ssudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+- > sudo curl -L "https://github.com/docker/compose/releases/download/1.26.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
 - > sudo chmod +x /usr/local/bin/docker-compose
 - > docker-compose --version
 
 #### Clone the Docker App
 
-- > git clone https://github.com/JiteshGaikwad/Rasa_Deployment
+- > git clone https://github.com/SSCharan-99/rasa_pro
 - > cd Rasa_Deployment
 
 #### Build the Docker app and run the services:
